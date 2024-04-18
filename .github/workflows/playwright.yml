@@ -1,0 +1,40 @@
+name: QA challenge Tests
+on:
+  push:                                    # comment this line if you don't want to run tests on a push #
+    branches: [ main ]
+  workflow_dispatch:                        # It allows to run the workflow manually from GitHub #
+  # schedule:  
+  #   - cron: '00 06 * * *'  
+jobs:
+  qachallenge:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.43.0-jammy
+      env:
+        USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+    steps:
+      - name: QA challenge repository
+        uses: actions/checkout@v4           # according to the related Node version #
+      - name: Run tests
+        run: |
+          npm install concurrently  # Install concurrently
+          npm install express
+          npm install react-scripts
+          npm install sql.js
+          #npm install --save eslint-config-airbnb
+          #npm install 
+          #npx playwright install
+          #npx playwright install msedge
+          #npx playwright install chrome
+          export NODE_OPTIONS=--openssl-legacy-provider
+          cd server
+          npm run setup
+          npm install react-dom
+          npm audit fix --force
+          npm start &
+          cd ..
+          sleep 5
+          ##npm install
+          npm ci
+          echo "Run the QA challenge tests"
+          npm run test:ci

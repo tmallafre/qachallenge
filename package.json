@@ -1,0 +1,27 @@
+{
+  "name": "playwrighte2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --headed",
+    "test:ci": "playwright test",
+    "ui": "playwright test --ui",
+    "tests": "playwright test --config=playwright.config.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.11.16",
+    "@types/uuid": "^9.0.8"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "node-fetch": "^2.6.7",
+    "playwright": "^1.41.0",
+    "typescript": "^4.9.5",
+    "uuid": "^9.0.1"
+  }
+}
