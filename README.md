@@ -2,7 +2,7 @@
 # Introduction 
 
 Això és la prova tècnica que em van fer fer els impresentables de Win Systems, que va costar un colló de fer funcionar i que no es van arribar a mirar.
-El directori on ho vaig deixar funcionat el dilluns 15 d'abril de 2024 és /home/tomi/dades/sync/diversos/tomi/diversos/udemy/playwright/ però en vull deixar una còpia on funcionin correctament totes les ordres 'git pull origin main', etc perquè amb tota la bogeria que va suposar fer-ho funcionar hi havia algunes opcions de sincronització que no funcionaven. He clonat el repositori funcional de GitHub a /home/tomi/dades/sync/diversos/tomi/playwright/projecte_winsystems/qachallenge/ i aquí miraré de deixar un repositori funcionant amb tot ok a https://github.com/tmallafre/winsystems
+El directori on ho vaig deixar funcionat el dilluns 15 d'abril de 2024 és /home/tomi/dades/sync/diversos/tomi/diversos/udemy/playwright/ (ho esborraré) però en vull deixar una còpia on funcionin correctament totes les ordres 'git pull origin main', etc perquè amb tota la bogeria que va suposar fer-ho funcionar hi havia algunes opcions de sincronització que no funcionaven. He clonat el repositori funcional de GitHub a /home/tomi/dades/sync/diversos/tomi/playwright/projecte_winsystems/qachallenge/ i aquí miraré de deixar un repositori funcionant amb tot ok a https://github.com/tmallafre/winsystems
 La descripció que ve a continuació fa referència al repo original que segurament acabaré eliminant.
 
 The private repository https://github.com/tmallafre/qachallenge will be used to store and use the Playwright tests for the Food Lookup Demo app test automation, and to run the server as well. This repository will be used to get the work delivered by the whole team in sync.
@@ -37,6 +37,11 @@ Feel free to reach me through GitHub or email if you have any questions.
 Atenció: el directori server/ ha de ser a .gitignore un cop s'han pujat els fitxers inicials d'aquest directori abans d'executar 
 $ npm run setup
 D'aquesta forma a GitHub hi ha els fitxers inicials i s'executa el 'npm run setup' a cada execució de tests.
+Per tal que arrenqui el servidor en local s'ha d'executar
+$ export NODE_OPTIONS=--openssl-legacy-provider
+i després
+$ npm start
+des del directori /server, tal com fan els passos definits a playwright.yml perquè arrenqui a CI.
 
 
 
