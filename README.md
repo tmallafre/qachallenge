@@ -2,8 +2,9 @@
 # Introduction 
 
 This is a challenge I received a few months ago; keep reading to understand how it works.
+It required quite a few tricky changes to the config files to get it working because there are some outdated libraries in the original code. 
 
-The private repository h[ttps://github.com/tmallafre/qachallenge](https://github.com/tmallafre/qachallenge) will be used to store and use the Playwright tests for the Food Lookup Demo app test automation, and to run the server as well. This repository will be used to get the work delivered by the whole team in sync.
+The repository h[ttps://github.com/tmallafre/qachallenge](https://github.com/tmallafre/qachallenge) will be used to store and use the Playwright tests for the Food Lookup Demo app test automation, and to run the server as well. This repository will be used to get the work delivered by the whole team in sync.
 # Getting Started
 In this repo we have all the code needed to run the Food Lookup Demo app and the Playwright tests, and the scripts that are needed to run them in CI.
 The server part is inside the folder named 'server' located below the /playwright folder, so we have all the code needed together but not mixed. You only need to clone the repo and install Playwright on your local environment to develop and run the tests there.
